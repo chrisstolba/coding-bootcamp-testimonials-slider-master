@@ -6,6 +6,7 @@ let PictureCard = ({ image, nextUser, prevUser }) => {
       <img
         className="pictureContainer"
         src={process.env.PUBLIC_URL + "/" + image}
+        alt="Active User's Profile Picture"
       />
       <div className="navigationButtons">
         <div className="prevUserButton" onClick={prevUser}></div>
