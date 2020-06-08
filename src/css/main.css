@@ -1,0 +1,194 @@
+/* 
+  - Mobile: 375px
+  - Desktop: 1440px
+*/
+
+:root {
+  --dark-blue: hsl(240, 38%, 20%);
+  --grayish-blue: hsl(240, 18%, 77%);
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 32px;
+}
+
+.App {
+  min-height: 100vh;
+  padding-top: 50px;
+  background-image: url(../images/pattern-curve.svg);
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-template-columns: auto auto;
+}
+
+.quoteCardContainer {
+  height: 350px;
+  width: 625px;
+  font-weight: 200;
+  color: var(--dark-blue);
+  background-image: url(../images/pattern-quotes.svg);
+  background-repeat: no-repeat;
+  background-position-x: 93px;
+  padding: 68px 0 0 0;
+  line-height: 45px;
+  position: relative;
+  top: 190px;
+  left: 122px;
+}
+
+.quoteContainer {
+  margin-bottom: 26px;
+}
+
+.quoteNameContainer {
+  font-size: 18px;
+  letter-spacing: 0.8px;
+}
+
+.quoteName {
+  margin-right: 8px;
+  font-weight: 700;
+}
+
+.quoteTitle {
+  color: var(--grayish-blue); 
+  font-weight: 500;
+}
+
+.pictureCardContainer {
+  background-image: url(../images/pattern-bg.svg);
+  background-position:center;
+  background-repeat: no-repeat;
+  height: 700px;
+  width: 700px;
+  padding: 85px 80px 60px 60px;
+}
+
+.pictureContainer {
+  border-radius: 5px;
+  box-shadow: 0px 40px 20px -20px rgba(0, 0, 0, 0.15);
+  width: 545px;
+}
+
+.navigationButtons {
+  height: 60px;
+  width: 115px;
+  border-radius: 30px;
+  background-color: white;
+  box-shadow: 0px 10px 20px rgba(0,0,0, 0.10);
+  position: relative;
+  top: -40px;
+  left: 60px;
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.prevUserButton {
+  background-image: url(../images/icon-prev.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.nextUserButton {
+  background-image: url(../images/icon-next.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.prevUserButton:hover, .nextUserButton:hover {
+  background-color: var(--grayish-blue);
+  border-radius: 30px;
+}
+
+.prevUserButton:active, .nextUserButton:active {
+  background-color: var(--dark-blue);
+}
+
+@media only screen and (max-width: 1325px) {
+  .App {
+    width:100vw;
+    padding: 0px;
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-row-gap: 60px;
+    align-content: start;
+    justify-content: center;
+    justify-items: center;
+    background-attachment: fixed;
+  }
+
+  .quoteCardContainer {
+    background-position-x: 50%;
+    text-align: center;
+    position: static;
+    top: 0;
+    left: 0;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+
+  .quoteNameContainer {
+    display: grid;
+    grid-template-rows: auto auto;
+  }
+
+  .quoteName, .quoteTitle {
+    height: 28px;
+  } 
+
+  .pictureCardContainer {
+    background-size: contain;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    display:grid;
+    justify-content: center;
+  }
+
+  .navigationButtons {
+    left: 40%;
+    top: -30px;
+  }
+}
+
+@media only screen and (max-width: 740px) {
+  .App {
+    grid-row-gap: 20px;
+  }
+
+  .quoteCardContainer, .pictureCardContainer {
+    width: 335px;
+    height: 335px;
+  }
+  
+  .pictureCardContainer {
+    margin-top: 20px;
+    padding: 40px 36px 40px 30px;
+  }
+
+  .pictureContainer {
+    width: 272.5px;
+    height: 262.5px;
+  }
+
+  .navigationButtons {
+    width: 100px;
+    height: 50px;
+    left: 90px;
+    top: -25px;
+  }
+
+  .quoteCardContainer {
+    background-size: 20%;
+    padding: 28px 15px 0 15px;
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .quoteContainer {
+    font-weight: 300;
+  }
+}
